@@ -4,9 +4,10 @@ import debounce from 'lodash.debounce';
 import './Search.css';
 
 class Search extends React.Component {
-  debounced = debounce(() => {
-    this.state.valueOnInput !== '' ? this.props.onSetMovieName(this.state.valueOnInput) : null;
-  }, 250);
+  debounced = debounce(
+    () => (this.state.valueOnInput !== '' ? this.props.onSetMovieName(this.state.valueOnInput) : null),
+    250
+  );
 
   state = {
     valueOnInput: '',
