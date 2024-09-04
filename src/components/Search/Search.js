@@ -6,6 +6,7 @@ import './Search.css';
 class Search extends React.Component {
   debounced = debounce(() => {
     this.state.valueOnInput !== '' ? this.props.onSetMovieName(this.state.valueOnInput) : null;
+    return;
   }, 250);
 
   state = {
